@@ -11,11 +11,11 @@ class Account
 
     function __construct($_username, $_email, Cart $_cart = NULL, Addresses $_addresses = NULL, Cards $_cards = NULL)
     {
-        $this->setUsername($_username);
-        $this->setEmail($_email);
-        $this->setCart($_cart);
-        $this->setAddresses($_addresses);
-        $this->setCards($_cards);
+        $this->username = $_username;
+        $this->email = $_email;
+        $this->cart = $_cart;
+        $this->addresses = $_addresses;
+        $this->cards = $_cards;
     }
 
     function setUsername($_username)
@@ -38,7 +38,7 @@ class Account
         return $this->email;
     }
 
-    function setCart($_cart)
+    function setCart(Cart $_cart)
     {
         $this->cart = $_cart;
     }
@@ -48,7 +48,7 @@ class Account
         return $this->cart;
     }
 
-    function setAddresses($_addresses)
+    function setAddresses(Addresses $_addresses)
     {
         $this->addresses = $_addresses;
     }
@@ -58,7 +58,7 @@ class Account
         return $this->addresses;
     }
 
-    function setCards($_cards)
+    function setCards(Cards $_cards)
     {
         $this->cards = $_cards;
     }

@@ -11,19 +11,19 @@ class Merchant extends Account
 
     function __construct($_username, $_email, Cards $_cards = NULL, Purse $_purse = NULL, Store $_store = NULL)
     {
-        $this->setUsername($_username);
-        $this->setEmail($_email);
-        $this->setCards($_cards);
-        $this->setPurse($_purse);
-        $this->setStore($_store);
+        $this->username = $_username;
+        $this->email = $_email;
+        $this->cards = $_cards;
+        $this->purse = $_purse;
+        $this->store = $_store;
     }
 
-    function setPurse($_purse)
+    function setPurse(Purse $_purse)
     {
         $this->purse = $_purse;
     }
 
-    function setStore($_store)
+    function setStore(Store $_store)
     {
         $this->store = $_store;
     }

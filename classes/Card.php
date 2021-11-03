@@ -6,9 +6,9 @@ class Card
 
     function __construct($_owner, $_code, $_cvv)
     {
-        $this->setOwner($_owner);
-        $this->setCode($_code);
-        $this->setCvv($_cvv);
+        $this->owner = $_owner;
+        $this->code = $_code;
+        $this->cvv = $_cvv;
     }
 
     function setOwner($_owner)
@@ -26,7 +26,7 @@ class Card
         if (
             !is_numeric($_code)
             || !is_int($_code)
-            || !strlen((string)$_code) != 16
+            || strlen((string)$_code) != 16
         ) throw new Exception("_code must be a number integer of 16 digits");
         $this->code = $_code;
     }
@@ -41,7 +41,7 @@ class Card
         if (
             !is_numeric($_cvv)
             || !is_int($_cvv)
-            || !strlen((string)$_cvv) != 3
+            || strlen((string)$_cvv) != 3
         ) throw new Exception("_cvv must be a number integer of 3 digits");
         $this->cvv = $_cvv;
     }

@@ -6,9 +6,9 @@ class Product
 
     function __construct($_name, $_price, $_description = NULL)
     {
-        $this->setName($_name);
-        $this->setDescription($_description);
-        $this->setPrice($_price);
+        $this->name = $_name;
+        $this->price = $_price;
+        $this->description = $_description;
     }
 
     function setName($_name)
