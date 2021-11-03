@@ -1,14 +1,15 @@
 <?php
 
-require_once __DIR__ . "/classes/Cart.php";
-require_once __DIR__ . "/classes/Addresses.php";
-require_once __DIR__ . "/classes/Cards.php";
+require_once __DIR__ . "/Cart.php";
+require_once __DIR__ . "/Addresses.php";
+require_once __DIR__ . "/Cards.php";
 
 class Account
 {
-    protected $username, $email, $cart, $addresses, $cards;
+    protected $username, $email, $cards;
+    private $cart, $addresses;
 
-    function __construct($_username, $_email, Cart $_cart, Addresses $_addresses, Cards $_cards)
+    function __construct($_username, $_email, Cart $_cart = NULL, Addresses $_addresses = NULL, Cards $_cards = NULL)
     {
         $this->setUsername($_username);
         $this->setEmail($_email);

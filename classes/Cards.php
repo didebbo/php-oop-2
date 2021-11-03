@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__ . "/classes/Card.php";
+require_once __DIR__ . "/Card.php";
 
 class Cards
 {
