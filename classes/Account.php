@@ -48,6 +48,16 @@ class Account
         return $this->cart;
     }
 
+    function addProduct(Product $_product)
+    {
+        $this->cart->addProduct($_product);
+    }
+
+    function remoProduct($_id)
+    {
+        $this->cart->removeProduct($_id);
+    }
+
     function setAddresses(Addresses $_addresses)
     {
         $this->addresses = $_addresses;
@@ -56,6 +66,16 @@ class Account
     function getAddresses()
     {
         return $this->addresses;
+    }
+
+    function addAddress($_addresses)
+    {
+        $this->addresses->addAddress($_addresses);
+    }
+
+    function removeAddress($_id)
+    {
+        $this->addresses->removeAddress($_id);
     }
 
     function setCards(Cards $_cards)

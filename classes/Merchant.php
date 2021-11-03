@@ -23,8 +23,38 @@ class Merchant extends Account
         $this->purse = $_purse;
     }
 
+    function getPurse()
+    {
+        return $this->purse;
+    }
+
+    function addCredit($_credit)
+    {
+        $this->purse->addCredit("100");
+    }
+
+    function removeCredit($_credit)
+    {
+        $this->purse->removeCredit($_credit);
+    }
+
     function setStore(Store $_store)
     {
         $this->store = $_store;
+    }
+
+    function getStore()
+    {
+        return $this->store;
+    }
+
+    function addProduct(Product $_product)
+    {
+        $this->store->addProduct($_product);
+    }
+
+    function removeProduct(Product $_product)
+    {
+        $this->store->removeProduct($_product);
     }
 }
