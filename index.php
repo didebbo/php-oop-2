@@ -7,15 +7,19 @@ require_once __DIR__ . "/classes/Cart.php";
 require_once __DIR__ . "/classes/Cards.php";
 require_once __DIR__ . "/classes/Card.php";
 
-$seller = new Merchant("BestSeller", "bestseller@gmail.com");
-$seller_cards = new Cards();
-$cards = [
-    new Card("Bestseller S.R.L.", 1234567890123456, 123),
-    new Card("Bestseller 2 S.R.L.", 6543210987654321, 321)
-];
-foreach ($cards as $card) $seller_cards->addCard($card);
+$cards = new Cards();
+$cards->addCard(new Card("Bestseller 1 S.R.L.", 1234567890123456, 123));
 
-$seller->setCards($seller_cards);
+$seller = new Merchant("BestSeller", "bestseller@gmail.com", $cards);
+
+
+$cards = [
+    new Card("Bestseller 2 S.R.L.", 6543210987654321, 321),
+    new Card("Bestseller 3 S.R.L.", 1234567890123456, 123),
+];
+foreach ($cards as $card) $seller->addCard($card);
+
+
 
 
 

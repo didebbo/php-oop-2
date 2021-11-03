@@ -67,4 +67,14 @@ class Account
     {
         return $this->cards;
     }
+
+    function addCard(Card $_card)
+    {
+        $this->cards->addCard($_card);
+    }
+
+    function removeCard($_id)
+    {
+        $this->cards->removeCard($_id);
+    }
 }
