@@ -1,7 +1,5 @@
 <?php
 
-use JetBrains\PhpStorm\Pure;
-
 require_once __DIR__ . "/classes/Account.php";
 require_once __DIR__ . "/classes/Merchant.php";
 require_once __DIR__ . "/classes/Product.php";
@@ -9,6 +7,7 @@ require_once __DIR__ . "/classes/Cart.php";
 require_once __DIR__ . "/classes/Cards.php";
 require_once __DIR__ . "/classes/Card.php";
 require_once __DIR__ . "/classes/Purse.php";
+require_once __DIR__ . "/classes/Store.php";
 
 $cards = new Cards();
 $cards->addCard(new Card("Bestseller 1 S.R.L.", 1234567890123456, 123));
@@ -23,11 +22,10 @@ $cards = [
 foreach ($cards as $card) $seller->addCard($card);
 
 $seller->setPurse(new Purse());
-
-
+$seller->setStore(new Store());
 
 $seller->addCredit(100);
-
+$seller->addProduct(new Product("Prodotto 1", 20, "Il mio primo prodotto"));
 
 
 var_dump($seller);
